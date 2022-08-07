@@ -5,23 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator | Do the MATH!</title>
-    <link rel="stylesheet" href="Calculator.css">
+    <title>WellQueueGatoR | Do the MATH!</title>
+    <link rel="icon" href="https://img.icons8.com/doodle/48/000000/calculator--v1.png">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- <div id="canvas"> -->
+    <div id="canvas">
         <div id="wrapper">
             <section id="section-1">
                 <ul>
-                    <li>Press <span>"Tab"</span> to Copy Evaluted Result</li>
-                    <li>Press <span>"Alt"</span> to Reset the Bar</li>
+                    <li>Press <span>"Tab"</span> to Copy Evaluted Result. 
+                        <span>//</span> Press <span>"Alt"</span> to Reset the Bar.</li>
                     <li><span>Logarithmic Function</span> can also be Evaluated. <span>// log(10000, 10)</span></li>
                     <li><span>Square Root</span> can also be determined. <span>// sqrt(-4)</span></li>
                     <li><span>Power</span> Raised to Some Number can also be determined. <span>// pow(2,3)</span></li>
                     <li><span>Derivatives </span> can also be found. <span>// derivative('x^2 + x', 'x')</span></li>
                     <li><span>Imaginary</span> Functions can be done. <span>// 9 / 3 + 2i</span></li>
                     <li><span>Trignometric Angles</span> can also be Found. <span>// sin(45deg)</span></li>
+                    <li><span>Factorial</span> can also be Evaluate. <span>// 7!</span></li>
                     <li><span>Type Conversions</span> can also be done. <span>// 4 inches to cm</span></li>
                 </ul>
             </section>
@@ -32,13 +34,16 @@
                 </form>
             </section>
         </div>
-        <!-- <div id="history">
-            anirudh
-        </div> -->
-    <!-- </div> -->
+        <div id="history">
+            <div class="insideHistory" id="historyOne">History.<svg id="resettor" class="animation1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                width="19" height="19"  
+                viewBox="0 0 16 16"
+                style=" fill:#0c4767;"><path d="M 1 0 L 0 1 L 0 7 L 6 7 L 7 6 L 4.7148438 3.7148438 C 6.1171093 2.3509295 6.6890288 2 8 2 C 10.206 2 12 3.794 12 6 L 12 7 L 14 7 L 14 6 C 14 2.691 11.309 0 8 0 C 5.9154518 0 4.8801705 0.76345583 3.3027344 2.3027344 L 1 0 z M 2 9 L 2 10 C 2 13.309 4.691 16 8 16 C 10.084548 16 11.11983 15.236544 12.697266 13.697266 L 15 16 L 16 15 L 16 9 L 10 9 L 9 10 L 11.285156 12.285156 C 9.8828907 13.649071 9.3109712 14 8 14 C 5.794 14 4 12.206 4 10 L 4 9 L 2 9 z"></path></svg></div>
+        </div>
+    </div>
 
     <div id="Links">
-        <a href=""><span data-tooltip="✨ This Repo On GitHub!" data-flow="top"><svg xmlns="http://www.w3.org/2000/svg"
+        <a href="https://github.com/AnirudhSinghBhadauria/WellQueueGator"><span data-tooltip="✨ This Repo On GitHub!" data-flow="top"><svg id="github" class="vibrate-1" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 100 100" width="80px" height="80px">
                     <path fill="#6693c1"
                         d="M71,82H29c-6.075,0-11-4.925-11-11V29c0-6.075,4.925-11,11-11h42c6.075,0,11,4.925,11,11v42	C82,77.075,77.075,82,71,82z" />
@@ -55,7 +60,7 @@
                     <path fill="#1f212b"
                         d="M71,83H29c-6.617,0-12-5.383-12-12V29c0-6.617,5.383-12,12-12h42c6.617,0,12,5.383,12,12v42	C83,77.617,77.617,83,71,83z M29,19c-5.514,0-10,4.486-10,10v42c0,5.514,4.486,10,10,10h42c5.514,0,10-4.486,10-10V29	c0-5.514-4.486-10-10-10H29z" />
                 </svg></span></a>
-        <a href=""><span data-tooltip="Copy Code using CodePen!" data-flow="top"><svg xmlns="http://www.w3.org/2000/svg"
+        <a href="https://codepen.io/AnirudhSinghBhadauria/pen/zYWdYjw"><span data-tooltip="Copy Code using CodePen!" data-flow="top"><svg xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 100 100" width="80px" height="80px">
                     <path fill="#f05b6c"
                         d="M31,18c-7.168,0-13,5.832-13,13v39c0,7.168,5.832,13,13,13h39c7.168,0,13-5.832,13-13V31 c0-7.169-5.832-13-13-13H31z" />
@@ -117,7 +122,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="Calculator.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,7 @@
 const form = document.querySelector(`form`);
 const button = document.querySelector(`button`);
+const resettor = document.querySelector(`#resettor`);
+const historyDiv = document.querySelector(`#history`);
 
 form.addEventListener(`submit`, (event) => {
   event.preventDefault();
@@ -14,28 +16,44 @@ form.addEventListener(`submit`, (event) => {
   }
 });
 
-
-
 const calculator = async () => {
   const expression = encodeURIComponent(form.elements.query.value);
-  const config = { headers: { "content-type": "application/json" } };
+  const config = {
+    headers: {
+      "content-type": "application/json"
+    }
+  };
   try {
     const response = await axios.get(
       `http://api.mathjs.org/v4/?expr=${expression}`,
       config
     );
+    addingHistory();
+    button.style.backgroundColor = `#aaf683`;
     form.elements.query.value = response.data;
     button.innerText = `Success`;
-    button.style.backgroundColor = `#aaf683`;
   } catch (error) {
     console.log(`Error 😢\n${error}`);
     button.innerText = `Math Error`;
     button.style.backgroundColor = `#ff0000`;
-    form.reset()
+    form.reset();
   }
 };
 
+const addingHistory = () => {
+  const history = document.createElement(`div`);
+  history.classList.add(`insideHistory`, `slide-in-blurred-top`);
+  history.innerText = form.elements.query.value;
+  historyDiv.append(history);
 
+  resettor.addEventListener(`click`, () => {
+    history.classList.remove(`slide-in-blurred-top`);
+    history.classList.toggle(`slide-out-blurred-top`);
+    setTimeout(() => {
+      history.remove();
+    }, 470);
+  });
+};
 
 window.addEventListener(`keydown`, (action) => {
   if (action.key === `Alt`) {
