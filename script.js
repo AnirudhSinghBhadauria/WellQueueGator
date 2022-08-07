@@ -25,7 +25,7 @@ const calculator = async () => {
   };
   try {
     const response = await axios.get(
-      `http://api.mathjs.org/v4/?expr=${expression}`,
+      `https://api.mathjs.org/v4/?expr=${expression}`,
       config
     );
     addingHistory();
